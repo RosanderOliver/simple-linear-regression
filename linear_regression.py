@@ -29,8 +29,7 @@ def main(argv):
 		elif token[0] == "@relation":
 			relation = token[1]
 		elif token[0].rstrip() == "@data":
-			data = [[0 for x in range(nr_of_attributes)] for y in range(rows_in_file)] # TODO: Change to numpy
-			data = [np.zeros(nr_of_attributes) for _ in range(rows_in_file)] # TODO: Change to numpy
+			data = [np.zeros(nr_of_attributes) for _ in range(rows_in_file)]
 		else:
 			token = token[0].split(",")
 			data[data_counter][0] = float(token[0])
